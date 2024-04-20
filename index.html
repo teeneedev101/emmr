@@ -9,6 +9,272 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+
+    <!-- amCharts javascript sources -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.amcharts.com/lib/3/amcharts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.amcharts.com/lib/3/serial.js"
+    ></script>
+
+    <!-- amCharts javascript code -->
+    <script type="text/javascript">
+      AmCharts.makeChart("chartdiv", {
+        type: "serial",
+        categoryField: "category",
+        colors: [
+          "#FF6600",
+          "#1F8A70",
+          "#B0DE09",
+          "#0D8ECF",
+          "#2A0CD0",
+          "#CD0D74",
+          "#CC0000",
+          "#00CC00",
+          "#0000CC",
+          "#DDDDDD",
+          "#999999",
+          "#333333",
+          "#990000",
+        ],
+        startDuration: 1,
+        categoryAxis: {
+          gridPosition: "start",
+        },
+        trendLines: [],
+        graphs: [
+          {
+            balloonText: "[[title]] of [[category]]:[[value]]",
+            bullet: "round",
+            id: "AmGraph-1",
+            title: "Plan",
+            valueField: "Plan",
+          },
+          {
+            balloonText: "[[title]] of [[category]]:[[value]]",
+            bullet: "square",
+            id: "AmGraph-2",
+            title: "Actual",
+            valueField: "Actual",
+          },
+        ],
+        guides: [],
+        valueAxes: [
+          {
+            id: "ValueAxis-1",
+            stackType: "regular",
+            title: "Axis title",
+          },
+        ],
+        allLabels: [],
+        balloon: {},
+        legend: {
+          enabled: true,
+          useGraphSettings: true,
+        },
+        titles: [
+          {
+            id: "Title-1",
+            size: 15,
+            text: "Progress",
+          },
+        ],
+        dataProvider: [
+          {
+            category: "Jan",
+            Plan: 8,
+            Actual: 5,
+          },
+          {
+            category: "Feb",
+            Plan: 6,
+            Actual: 7,
+          },
+          {
+            category: "Mar",
+            Plan: 2,
+            Actual: 3,
+          },
+          {
+            category: "Apr",
+            Plan: 1,
+            Actual: 3,
+          },
+          {
+            category: "May",
+            Plan: 2,
+            Actual: 1,
+          },
+          {
+            category: "Jun",
+            Plan: 3,
+            Actual: 2,
+          },
+          {
+            category: "Jul",
+            Plan: 6,
+            Actual: 8,
+          },
+          {
+            category: "Aug",
+            Plan: "4",
+            Actual: "9",
+          },
+          {
+            category: "Sep",
+            Plan: "2",
+            Actual: "5",
+          },
+          {
+            category: "Oct",
+            Plan: "13",
+            Actual: "11",
+          },
+          {
+            category: "Nov",
+            Plan: "22",
+            Actual: "20",
+          },
+          {
+            category: "Dec",
+            Plan: "25",
+            Actual: "19",
+          },
+        ],
+      })
+    </script>
+
+    <!-- amCharts javascript code -->
+    <script type="text/javascript">
+      AmCharts.makeChart("chartdiv1", {
+        type: "serial",
+        categoryField: "category",
+        colors: [
+          "#74E291",
+          "#FF6C22",
+          "#B0DE09",
+          "#0D8ECF",
+          "#2A0CD0",
+          "#CD0D74",
+          "#CC0000",
+          "#00CC00",
+          "#0000CC",
+          "#DDDDDD",
+          "#999999",
+          "#333333",
+          "#990000",
+        ],
+        startDuration: 1,
+        categoryAxis: {
+          gridPosition: "start",
+        },
+        trendLines: [],
+        graphs: [
+          {
+            balloonText: "[[title]] of [[category]]:[[value]]",
+            fillAlphas: 1,
+            id: "AmGraph-1",
+            title: "Energy",
+            type: "column",
+            valueField: "Energy",
+          },
+          {
+            balloonText: "[[title]] of [[category]]:[[value]]",
+            fillAlphas: 1,
+            id: "AmGraph-2",
+            title: "Utility",
+            type: "column",
+            valueField: "Utility",
+          },
+        ],
+        guides: [],
+        valueAxes: [
+          {
+            id: "ValueAxis-1",
+            title: "Axis title",
+          },
+        ],
+        allLabels: [],
+        balloon: {},
+        legend: {
+          enabled: true,
+          useGraphSettings: true,
+        },
+        titles: [
+          {
+            id: "Title-1",
+            size: 15,
+            text: "Chart Title",
+          },
+        ],
+        dataProvider: [
+          {
+            category: "Jan",
+            Energy: 8,
+            Utility: 5,
+          },
+          {
+            category: "Feb",
+            Energy: 6,
+            Utility: 7,
+          },
+          {
+            category: "Mar",
+            Energy: 2,
+            Utility: 3,
+          },
+          {
+            category: "Apr",
+            Energy: "4",
+            Utility: "8",
+          },
+          {
+            category: "May",
+            Energy: "10",
+            Utility: "9",
+          },
+          {
+            category: "Jun",
+            Energy: "5",
+            Utility: "7",
+          },
+          {
+            category: "Jul",
+            Energy: "12",
+            Utility: "13",
+          },
+          {
+            category: "Aug",
+            Energy: "13",
+            Utility: "10",
+          },
+          {
+            category: "Sep",
+            Energy: "20",
+            Utility: "18",
+          },
+          {
+            category: "Oct",
+            Energy: "15",
+            Utility: "13",
+          },
+          {
+            category: "Nov",
+            Energy: "12",
+            Utility: "16",
+          },
+          {
+            category: "Dec",
+            Energy: "17",
+            Utility: "20",
+          },
+        ],
+      })
+    </script>
   </head>
 
   <body>
@@ -98,10 +364,16 @@
               พวกเราชาวซ่อมบำรุง EMMR ยินดีต้อนรับ
             </p>
             <p>
-              <a href="chartjs.html" target="_blank" class="btn btn-warning my-2"
+              <a
+                href="chartjs.html"
+                target="_blank"
+                class="btn btn-warning my-2"
                 >Energy Chart</a
               >
-              <a href="linechart.html" target="_blank" class="btn btn-danger my-2"
+              <a
+                href="linechart.html"
+                target="_blank"
+                class="btn btn-danger my-2"
                 >Line Chart</a
               >
             </p>
@@ -420,7 +692,18 @@
             </div>
           </div>
         </div>
+
+        <!-- Chart -->
+        <div
+          id="chartdiv"
+          style="width: 100%; height: 400px; background-color: #ffffff"
+        ></div>
       </div>
+
+      <div
+        id="chartdiv1"
+        style="width: 100%; height: 400px; background-color: #ffffff"
+      ></div>
     </main>
 
     <footer class="text-body-secondary py-5">
